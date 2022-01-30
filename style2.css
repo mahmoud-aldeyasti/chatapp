@@ -6,7 +6,7 @@ font-family: 'Rubik', sans-serif;
 margin: 0px;
 padding: 0px;
 background-color: #f5f3f7;
-line-height: 1.3;
+line-height: 1.4;
 
 }
 
@@ -23,11 +23,19 @@ line-height: 1.3;
 
 .container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.cont{
+    position: relative;
+    width: 700px;
+    margin:0px 20px 20px 0px;
+}
 
 .back{
-    position: relative;
+
  
     width: 350px;
     height: 80vh;
@@ -35,17 +43,18 @@ line-height: 1.3;
     border-bottom-right-radius: 250px 250px;
     background-image: linear-gradient(#e942ff , #8838ff);
 
+}
 
 
     /* _______________chat inside elements____________________ */
-}
+
 .chat{
     position: absolute;
     z-index: 10000;
     width: 280px;
-    height: 66vh;
+    height: 57vh;
     bottom: 7%;
-    left: 85%;
+    left: 300px;
     background-color: #f5f3f7;
     border: 40px solid white;
     border-radius: 32px;
@@ -56,7 +65,7 @@ line-height: 1.3;
 
 .chatin{
     width: calc(280px - 20px);
-    height: calc(66vh - 20px);
+    height: calc(57vh - 20px);
     background-color: #f5f3f7;
     border-radius: 32px;
     position: relative;
@@ -86,7 +95,7 @@ line-height: 1.3;
 
 
 .head1{
-    width: 50%;
+    width: 68%;
     height: 35%;
     background-color: white;
     border-bottom-left-radius: 16px;
@@ -223,17 +232,134 @@ form{
 }
 
 .option{
-    padding: 5px 5px;
+    padding: 8px 5px;
     margin: 4px 13px;
     background-image: linear-gradient(#e942ff , #8838ff);
-    width: 64%;
+    width: 60%;
     color: #d89eff;
-    font-size: 0.35rem;
+    font-size: 0.45rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+}
+
+.option input{
+    margin:0px 5px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option label{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.option label span{
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.option input::after{
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(#e942ff , #8838ff);
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 1px solid #e570ff;
+
+}
+.option input:checked::after{
+    position: absolute;
+    content: "";
+    background-color: #f5f3f7;
+    background-image: unset;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 50%;
+    border: 1px solid #e570ff;
+
+}
+
+.sumbit1{
+    padding: 2px 5px;
+    margin: 10px 13px;
+    background-color: white;
+    width: 75%;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+
+.sumbit1 input[type="text"]
+{
+    border: 0px solid transparent;
+    width: 90%;
+    margin:1px 3px 1px 13px;
+    font-size: 0.6rem;
+}
+.sumbit1 input[type="text"]:checked
+{
+    border: 0px solid transparent;
+    width: 90%;
+    margin:1px 3px 1px 13px;
+    font-size: 0.6rem;
+}
+.sumbit1 input[type="text"]::placeholder
+{
+
+    margin:1px 3px 1px 6px;
+    font-size: 0.6rem;
+    opacity: 0.6;
+
+}
+
+.sumbit1 input[type="submit"]
+{
+    color: white;
+    background-color: #3e2753;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin: 1px;
 }
 
 
- 
 
+/* ________________ paragraph________________ */
+.text{
+    line-height: 1.8;
+    margin: 20px 40px;
+}
+
+.text h1{
+    margin: 10px;
+    color: #3e2753;
+}
+
+.text p{
+    margin: 10px;
+    color: #a39daa;
+}
+
+
+/* ___________________back 2___________________ */
